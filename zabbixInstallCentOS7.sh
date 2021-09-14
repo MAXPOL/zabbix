@@ -3,7 +3,7 @@
 passwoddb=''
 
 echo "Enter new password database:"
-read $passworddb
+read passworddb
 
 yum update -y
 yum install -y epel-release
@@ -17,6 +17,7 @@ systemctl enable mariadb
 systemctl start mariadb
 
 mysql_secure_installation <<EOF
+
 y
 $passworddb
 $passworddb
