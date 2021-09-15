@@ -31,7 +31,7 @@ rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.e
 
 yum install -y zabbix-server-mysql zabbix-web-mysql zabbix-get
 
-mysql -u root -p$passworddb -e "create database zabbix;"
+mysql -u root -p$passworddb -e "create database zabbix character set UTF8 collate utf8_general_ci;"
 mysql -u root -p$passworddb -e "create user 'zabbix'@'%' identified BY '$passworddb';"
 mysql -u root -p$passworddb -e "grant all privileges on zabbix.* to 'zabbix'@'%';"
 mysql -u root -p$passworddb -e "flush privileges;"
