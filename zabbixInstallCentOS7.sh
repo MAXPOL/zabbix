@@ -43,4 +43,9 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 sed -i 's/# php_value date.timezone Europe\/Riga/php_value date.timezone Europe\/Moscow/g' /etc/httpd/conf.d/zabbix.conf
 
 systemctl enable zabbix-server
+
+echo "Done!"
+
+sleep 10
+
 reboot
