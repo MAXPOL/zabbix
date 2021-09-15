@@ -45,6 +45,7 @@ sed -i 's/# php_value date.timezone Europe\/Riga/php_value date.timezone Europe\
 systemctl enable zabbix-server
 
 firewall-cmd --permanent --zone=public --add-service=http
+firewall-cmd --permanent --zone=public --add-port=3386/tcp
 
 echo "Done! After reload enter in string you browser: http://ip-address-server/zabbix"
 
