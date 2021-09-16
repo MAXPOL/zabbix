@@ -2,7 +2,7 @@
 
 This is minimal instruction how full install ZABBIX on personal server with operation system CentOS7
 
-use zabbixInstallCentOS7.sh
+use zabbixServerInstallCentOS7.sh for settings server part
 
 Firsts step:
 
