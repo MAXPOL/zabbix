@@ -22,3 +22,8 @@ chmod +x zabbixInstallCentOS7.sh
 
 Done! After reload enter in string you browser: http://ip-address-server/zabbix
 
+Default login and password:
+
+login: Admin
+
+password: zabbix
