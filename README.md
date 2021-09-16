@@ -27,3 +27,6 @@ Default login and password:
 login: Admin
 
 password: zabbix
+
+Attention ! : If there is error en web GUI "zabbix server is not running" you can testing file
+(/etc/zabbix/zabbix_server.conf) and (/etc/zabbix/web/zabbix.conf.php) that the data is filled in correctly.
