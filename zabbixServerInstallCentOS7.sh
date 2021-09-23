@@ -47,6 +47,7 @@ systemctl enable zabbix-server
 firewall-cmd --permanent --zone=public --add-service=http
 firewall-cmd --permanent --zone=public --add-port=3306/tcp
 firewall-cmd --permanent --zone=public --add-port=10051/tcp
+firewall-cmd --permanent --zone=public --add-port=10050/tcp
 
 echo "Done! After reload enter in string you browser: http://ip-address-server/zabbix"
 
