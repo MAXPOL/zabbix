@@ -11,8 +11,6 @@ rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.e
 
 yum install -y zabbix-agent
 
-zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u zabbix -p$passworddb zabbix
-
 sed -i 's/Server=127.0.0.1/Server='$serveraddress'/g' /etc/zabbix/zabbix_agent.conf
 sed -i 's/# ListenPort=10050/ListenPort=10050/g' /etc/zabbix/zabbix_agent.conf
 sed -i 's/ServerActive=127.0.0.1/ServerActive='$serveraddress'/g' /etc/zabbix/zabbix_agent.conf
