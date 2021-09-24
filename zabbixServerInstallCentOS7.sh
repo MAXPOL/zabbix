@@ -38,7 +38,7 @@ mysql -u root -p$passworddb -e "flush privileges;"
 
 zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u zabbix -p$passworddb zabbix
 
-sed -i 's/# DBPassword=/DBPassword=$passworddb/g' /etc/zabbix/zabbix_server.conf
+sed -i 's/# DBPassword=/DBPassword='$passworddb'/g' /etc/zabbix/zabbix_server.conf
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 sed -i 's/# php_value date.timezone Europe\/Riga/php_value date.timezone Europe\/Moscow/g' /etc/httpd/conf.d/zabbix.conf
 
